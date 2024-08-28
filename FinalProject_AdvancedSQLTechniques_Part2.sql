@@ -6,13 +6,14 @@ write a SQL statement to update the Leaders_Score field in the CHICAGO_PUBLIC_SC
 by in_School_ID to the value in the in_Leader_Score parameter*/
 DELIMITER @
 CREATE PROCEDURE UPDATE_LEADERS_SCORE (
-																				IN in_School_ID INT , 
-                                                                                IN in_Leader_Score INT 
-                                                                                )
+					IN in_School_ID INT , 
+                                 	IN in_Leader_Score INT 
+	                        	)
 BEGIN
-		UPDATE CHICAGO_PUBLIC_SCHOOLS
-		SET Leaders_Score = in_Leader_Score
-		WHERE School_ID = in_School_ID;
+	UPDATE CHICAGO_PUBLIC_SCHOOLS
+	SET Leaders_Score = in_Leader_Score
+	WHERE School_ID = in_School_ID;
+
 END @
 DELIMITER ;
 
@@ -30,9 +31,9 @@ by in_School_ID using the following information.*/
 -- ------------------------------------------------------------
 DELIMITER @
 CREATE PROCEDURE UPDATE_LEADERS_SCORE (
-																				IN in_School_ID INT , 
-                                                                                IN in_Leader_Score INT 
-                                                                                )
+					IN in_School_ID INT , 
+                                        IN in_Leader_Score INT 
+                                        )
 BEGIN
 		UPDATE CHICAGO_PUBLIC_SCHOOLS
 		SET Leaders_Score = in_Leader_Score
@@ -75,9 +76,9 @@ Add a generic ELSE clause to the IF statement that rolls back the current work i
 Add a statement to commit the current unit of work at the end of the procedure.*/
 DELIMITER @
 CREATE PROCEDURE UPDATE_LEADERS_SCORE (
-																				IN in_School_ID INT , 
-                                                                                IN in_Leader_Score INT 
-                                                                                )
+					IN in_School_ID INT , 
+                                        IN in_Leader_Score INT 
+                                        )
 BEGIN
 		UPDATE CHICAGO_PUBLIC_SCHOOLS
 		SET Leaders_Score = in_Leader_Score
